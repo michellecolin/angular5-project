@@ -1,0 +1,20 @@
+<div class="container">
+  <div class="row">
+    <div class="col-xs-12">
+      <button class="btn btn-primary" (click)="showParagraph()">Display details</button>
+
+      <p *ngIf="show">This is my hidden content</p>
+
+      <div>
+        <h3> Click Log </h3>
+        <div *ngFor="let log of buttonClicks; let i = index">
+          <span 
+            [ngClass]="{'white': i >= 4}"  
+            [ngStyle]="{'background-color': i >= 4 ? 'blue' : 'none'}">
+            {{log}}
+          </span>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>
