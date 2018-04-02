@@ -1,68 +1,8 @@
 <section class="section rhz-bg">
 	<div class="container">
-		<div class="row">
-			<p>Latest Transactions</p>
-		</div>
-		
-		<mat-table #table [dataSource]="dataSource">
-			<ng-container matColumnDef="position">
-			  <mat-header-cell *matHeaderCellDef> No. </mat-header-cell>
-			  <mat-cell *matCellDef="let element"> {{element.position}} </mat-cell>
-			</ng-container>
+		CONTENT
 
-			<!-- Name Column -->
-			<ng-container matColumnDef="name">
-			  <mat-header-cell *matHeaderCellDef> Name </mat-header-cell>
-			  <mat-cell *matCellDef="let element"> {{element.name}} </mat-cell>
-			</ng-container>
-
-			<!-- Weight Column -->
-			<ng-container matColumnDef="weight">
-			  <mat-header-cell *matHeaderCellDef> Weight </mat-header-cell>
-			  <mat-cell *matCellDef="let element"> {{element.weight}} </mat-cell>
-			</ng-container>
-
-			<!-- Symbol Column -->
-			<ng-container matColumnDef="symbol">
-			  <mat-header-cell *matHeaderCellDef> Symbol </mat-header-cell>
-			  <mat-cell *matCellDef="let element"> {{element.symbol}} </mat-cell>
-			</ng-container>
-
-			<mat-header-row *matHeaderRowDef="displayedColumns"></mat-header-row>
-			<mat-row *matRowDef="let row; columns: displayedColumns;"></mat-row>
-		</mat-table>
-
-		<div class="row">
-			<table matSort (matSortChange)="sortData($event)">
-			  <tr>
-			    <th mat-sort-header="id">Block ID</th>
-				<th mat-sort-header="transaction">Transaction</th>
-				<th mat-sort-header="sender">Sender</th>
-				<th mat-sort-header="receiver">Receiver</th>
-				<th mat-sort-header="type">Type</th>
-				<th mat-sort-header="value">Value</th>
-				<th mat-sort-header="time">Time</th>
-			  </tr>
-
-			  <tr *ngFor="let transaction of sortedData">
-			    <td>{{transaction.id}}</td>
-			    <td class="max-width-30">{{transaction.transaction}}</td>
-			    <td>{{transaction.sender}}</td>
-			    <td>{{transaction.receiver}}</td>
-			    <td>{{transaction.type}}</td>
-			    <td>{{transaction.value}}</td>
-			    <td>{{transaction.time}}</td>
-			  </tr>
-			  <tr *ngFor="let transaction of sortedData">
-			    <td>{{transaction.id}}</td>
-			    <td class="max-width-30">{{transaction.transaction}}</td>
-			    <td>{{transaction.sender}}</td>
-			    <td>{{transaction.receiver}}</td>
-			    <td>{{transaction.type}}</td>
-			    <td>{{transaction.value}}</td>
-			    <td>{{transaction.time}}</td>
-			  </tr>
-			</table>
-		</div>
+		<input type="text" [(ngModel)]="name"/>
+		<p>{{name}}</p>
 	</div>
 </section>
