@@ -11,7 +11,7 @@ export class RecipeListComponent implements OnInit {
 
   recipes: Recipe[] = [
     new Recipe('lasagna', 'pasta with ground meet', 'https://images.media-allrecipes.com/userphotos/560x315/3359675.jpg'),
-    new Recipe('gnocchi', 'gnocchi with ground meet', 'enfants.teamwork.com/#/projects/185389/tasks/board')
+    new Recipe('gnocchi', 'gnocchi with ground meet', 'https://food.fnr.sndimg.com/content/dam/images/food/fullset/2008/12/23/1/FNmag_Gnocchi-NiCoise-ima_s4x3.jpg.rend.hgtvcom.616.462.suffix/1371589316215.jpeg')
   ];
 
   constructor() { }
