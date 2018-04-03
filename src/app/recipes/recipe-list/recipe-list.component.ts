@@ -20,7 +20,6 @@ export class RecipeListComponent implements OnInit {
   }
 
   showRecipeDetails(recipe) {
-    console.log('showRecipeDetails event', recipe);
     this.openRecipeDetails.emit({recipe: recipe});
   }  
 
