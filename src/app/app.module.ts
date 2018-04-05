@@ -1,10 +1,10 @@
 import { BrowserModule } from '@angular/platform-browser';
 import { NgModule } from '@angular/core';
 import { FormsModule } from '@angular/forms';
+import { Routes, RouterModule } from '@angular/router';
 
 import { AppComponent } from './app.component';
 import { HeaderComponent } from './header/header.component';
-
 
 import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 
@@ -50,6 +50,12 @@ import { ShoppingListComponent } from './shopping-list/shopping-list.component';
 import { ShoppingEditComponent } from './shopping-list/shopping-edit/shopping-edit.component';
 import { DropdownDirective } from './shared/dropdown.directive';
 import { ShoppingListService } from './shopping-list/shopping-list.service';
+import { RecipesService } from './recipes/recipes.service';
+
+const appRoutes: Routes = [
+  { path: '', component: RecipeListComponent },
+  { path: 'shopping-list', component: ShoppingListComponent }
+];
 
 @NgModule({
   declarations: [
@@ -99,8 +105,9 @@ import { ShoppingListService } from './shopping-list/shopping-list.service';
     MatTabsModule,
     MatToolbarModule,
     MatTooltipModule,
+    RouterModule.forRoot(appRoutes),
   ],
-  providers: [ShoppingListService],
+  providers: [ShoppingListService, RecipesService],
   bootstrap: [AppComponent]
 })
 export class AppModule { }
