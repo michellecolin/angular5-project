@@ -34,6 +34,10 @@ export class RecipesService {
     return this.recipes.slice(); //return copy not the reference
   }
 
+  getRecipe(id) {
+    return this.recipes[id];
+  }
+  
   addIngredientsToShoppingList(ingredients: Ingredient[]) {
     this.slService.addIngredients(ingredients);
   }
